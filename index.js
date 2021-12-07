@@ -23,7 +23,7 @@ async function downloadComponenteOrganizacional() {
     var { data } = await axios.get(urlRecente);
     $ = cheerio.load(data);
 
-    //url do link do pdf do botao "Visualizar da página"
+    //url do link do pdf do botao "Visualizar" da página
     $('table tbody tr td a').each((i, elem) => {
         const link = $(elem).attr('href');
         if (i < 1) {
